@@ -2,7 +2,7 @@ import { useReducer } from 'react'
 
 const initialState = { count: 0 }
 
-function reducer(state: any, action: { type: string }) {
+function reducer(state: any, action: any) {
   switch (action.type) {
     case 'increment':
       return { count: state.count + 1 }
