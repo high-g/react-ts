@@ -7,11 +7,16 @@ const Counter: React.FC<{}> = () => {
     setValue(value + num)
   }
 
-  const renderTimes = useRef(0)
+  const renderTimes = useRef<number>(0)
+  const inputEl = useRef<HTMLInputElement>(null!)
 
   useEffect(() => {
     renderTimes.current = renderTimes.current + 1
   })
+
+  const focusInput = () => {
+    inputEl.current.focus()
+  }
 
   return (
     <div>
@@ -31,6 +36,8 @@ const Counter: React.FC<{}> = () => {
         -1
       </button>
       <div>再レンダリング数: {renderTimes.current}回</div>
+      <input ref={inputEl} type="text" />
+      <button onClick={focusInput}>フォーカス当てる</button>
     </div>
   )
 }
