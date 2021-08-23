@@ -1,9 +1,21 @@
 interface AppProps {
-  message: string
+  message?: string
+  description?: string
 }
 
-const App: React.FunctionComponent<AppProps> = ({ message }) => {
-  return <div>{message}</div>
+const App: React.FunctionComponent<AppProps> = ({ message, description }) => {
+  return (
+    <div>
+      {message}
+      <br />
+      {description}
+    </div>
+  )
+}
+
+App.defaultProps = {
+  message: 'Hello, defaultProps!!',
+  description: 'This is App component',
 }
 
 export default App
