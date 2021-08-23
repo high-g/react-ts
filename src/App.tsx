@@ -3,7 +3,7 @@ interface AppProps {
 }
 
 function App({ message }: AppProps) {
-  return <div className="App">{message}</div>
+  return <div>{message}</div>
 }
 
 export default App
