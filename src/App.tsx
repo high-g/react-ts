@@ -2,7 +2,7 @@ interface AppProps {
   message: string
 }
 
-function App({ message }: AppProps) {
+const App: React.FunctionComponent<AppProps> = ({ message }) => {
   return <div>{message}</div>
 }
 
