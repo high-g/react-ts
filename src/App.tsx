@@ -1,3 +1,4 @@
+import Counter from './Counter'
 interface AppProps {
   message?: string
   description?: string
@@ -6,9 +7,7 @@ interface AppProps {
 const App: React.FunctionComponent<AppProps> = ({ message, description }) => {
   return (
     <div>
-      {message}
-      <br />
-      {description}
+      <Counter />
     </div>
   )
 }
